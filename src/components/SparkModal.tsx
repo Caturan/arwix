@@ -131,19 +131,19 @@ Link: ${article.url}
           {/* Prompt Box */}
           <div className="relative group">
             <div className="absolute -inset-0.5 bg-gradient-to-r from-amber-500 to-blue-600 rounded-lg opacity-20 group-hover:opacity-40 transition-opacity blur"></div>
-            <div className="relative bg-zinc-50 dark:bg-[#051024] rounded-lg border border-zinc-200 dark:border-zinc-800 p-4">
+            <div className="relative bg-white/80 dark:bg-[#051024] rounded-lg border border-blue-200 dark:border-zinc-800 p-4 shadow-sm">
                {/* Controls Bar inside the box */}
-               <div className="flex items-center justify-between mb-3 pb-3 border-b border-zinc-200 dark:border-zinc-800">
-                 <div className="flex items-center gap-1 bg-zinc-100 dark:bg-[#0A1A35] p-1 rounded-lg">
+               <div className="flex items-center justify-between mb-3 pb-3 border-b border-blue-100 dark:border-zinc-800">
+                 <div className="flex items-center gap-1 bg-blue-50 dark:bg-[#0A1A35] p-1 rounded-lg">
                    <button
                     onClick={() => setLanguage('en')}
-                    className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${language === 'en' ? 'bg-white dark:bg-[#152642] text-zinc-900 dark:text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-300'}`}
+                    className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${language === 'en' ? 'bg-white dark:bg-[#152642] text-blue-900 dark:text-white shadow-sm ring-1 ring-blue-100 dark:ring-0' : 'text-blue-600 dark:text-zinc-500 hover:text-blue-900 dark:hover:text-zinc-300'}`}
                    >
                     English
                    </button>
                    <button
                     onClick={() => setLanguage('tr')}
-                    className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${language === 'tr' ? 'bg-white dark:bg-[#152642] text-zinc-900 dark:text-white shadow-sm' : 'text-zinc-500 hover:text-zinc-900 dark:hover:text-zinc-300'}`}
+                    className={`px-3 py-1 text-xs font-medium rounded-md transition-all ${language === 'tr' ? 'bg-white dark:bg-[#152642] text-blue-900 dark:text-white shadow-sm ring-1 ring-blue-100 dark:ring-0' : 'text-blue-600 dark:text-zinc-500 hover:text-blue-900 dark:hover:text-zinc-300'}`}
                    >
                     Türkçe
                    </button>
@@ -151,16 +151,16 @@ Link: ${article.url}
 
                  <button 
                    onClick={handleCopy}
-                   className="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-[#152642] hover:bg-zinc-100 dark:hover:bg-[#1E3050] border border-zinc-200 dark:border-zinc-700 rounded-md text-xs font-medium shadow-sm transition-all"
+                   className="flex items-center gap-1.5 px-3 py-1.5 bg-white dark:bg-[#152642] hover:bg-blue-50 dark:hover:bg-[#1E3050] border border-blue-200 dark:border-zinc-700 rounded-md text-xs font-medium shadow-sm transition-all"
                  >
-                   {copied ? <Check size={14} className="text-green-500" /> : <Copy size={14} className="text-zinc-500" />}
-                   <span className={copied ? "text-green-600" : "text-zinc-700 dark:text-zinc-300"}>
+                   {copied ? <Check size={14} className="text-green-500" /> : <Copy size={14} className="text-blue-500 dark:text-zinc-500" />}
+                   <span className={copied ? "text-green-600" : "text-blue-700 dark:text-zinc-300"}>
                      {copied ? "Copied!" : "Copy Prompt"}
                    </span>
                  </button>
                </div>
 
-               <pre className="whitespace-pre-wrap text-xs sm:text-sm text-zinc-600 dark:text-zinc-300 font-mono h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-300 dark:scrollbar-thumb-zinc-700">
+               <pre className="whitespace-pre-wrap text-xs sm:text-sm text-blue-900 dark:text-zinc-300 font-mono h-48 overflow-y-auto scrollbar-thin scrollbar-thumb-blue-200 dark:scrollbar-thumb-zinc-700">
                  {prompt}
                </pre>
             </div>
