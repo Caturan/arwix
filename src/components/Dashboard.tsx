@@ -25,9 +25,9 @@ export default function Dashboard({ initialArticles }: { initialArticles: Articl
   }, [search, filter, initialArticles]);
 
   return (
-    <main className="min-h-screen bg-zinc-50 dark:bg-[var(--background)] text-zinc-900 dark:text-zinc-100">
+    <main className="min-h-screen bg-[var(--background)] text-zinc-900 dark:text-zinc-100">
       {/* Header */}
-      <header className="sticky top-0 z-10 bg-white/80 dark:bg-[var(--background)]/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800">
+      <header className="sticky top-0 z-10 bg-[var(--background)]/80 backdrop-blur-md border-b border-zinc-200 dark:border-zinc-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2">
             <div className="relative w-8 h-8 rounded-lg overflow-hidden shadow-sm">
